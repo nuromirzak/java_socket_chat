@@ -4,9 +4,10 @@ import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ClientHandler implements Runnable {
-    public static List<ClientHandler> clientHandlers = new ArrayList<>();
+    public static List<ClientHandler> clientHandlers = new CopyOnWriteArrayList<>();
     private Socket socket;
     private BufferedReader bufferedReader;
     private BufferedWriter bufferedWriter;
